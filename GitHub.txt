@@ -1,0 +1,21 @@
+#Перененести файлы в github для ссылки
+#2кнмыши gitbush here
+
+#git config --global user.name "Name" #- идентификация на компе
+#git config --global user.email email@example.ru
+
+git clone https://github.com/Serge-Papka/SeeFight.git
+#после добавления в эту папку файлов (изменений)
+git add .
+git commit
+git push
+
+
+
+# - Рабочуюю папку скинуть в репозиторий, в папке:
+git init
+git add .
+Git commit - m "Комментарий commit"
+git remote add any_name https://github.com/Serge-Papka/C3.git  # C3 должен быть создан.
+git push --set-upstream any_name master
+

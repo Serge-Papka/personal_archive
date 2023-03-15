@@ -1,0 +1,53 @@
+def get_mul_func(m):
+   nonlocal_m = m
+   def local_mul(n):
+       return n * nonlocal_m
+
+   return local_mul
+
+two_mul = get_mul_func(2)  # возвращаем функцию, которая будет умножать числа на 2
+two_mul(5)  # 5 * 2
+ -----------------------------------
+def my_func(*args, **kwargs):
+   print(type(args))
+   print(type(kwargs))
+
+my_func()
+# <class 'tuple'> кортеж
+# <class 'dict'> Словарь{}
+
+---------------------------
+
+# С помощью рекурсивной функции найдите сумму чисел от 1 до n.
+def def_sum(n):
+   if(n == 1):
+      return (1)
+   return n+def_sum(n-1)
+print(def_sum(int(input("Число: "))))
+
+---
+
+# С помощью рекурсивной функции разверните строку.
+
+# #  --------------
+# def reverse_str(string):
+#    if len(string) == 0:
+#        return ''
+#    else:
+#        return string[-1] + reverse_str(string[:-1])
+#
+# reverse_str('test')  # tset
+
+# Дано натуральное число N. Вычислите сумму его цифр.
+# При решении этой задачи нельзя использовать строки, списки, массивы (ну и циклы, разумеется).
+def sum_rec(N):
+    if N == 0:
+        return 0
+    return N % 10 + sum_rec(N // 10)
+print(sum_rec(1222999999999999921))
+===
+def sum_rec(N):
+    if N < 10:
+        return N
+    return N % 10 + sum_rec(N // 10)
+print(sum_rec(1222999999999999921))

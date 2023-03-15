@@ -1,0 +1,35 @@
+import time
+def fib():
+    a, b = 0, 1
+    yield a
+    print('---------')
+    yield b
+    print('---------')
+    time.sleep(0.1)
+    while True:
+        a, b = b, a + b
+        yield b
+        print('---------2')
+        time.sleep(0.1)
+for num in fib():
+   print(num)
+
+
+--------------------
+
+# Создать функцию-генератор, возвращающую бесконечную последовательность натуральных чисел. По умолчанию она начинается с
+# единицы, её шаг равен 1, но пользователь может указать любой шаг и любое число в качестве аргумента функции, с которого
+# будет начинаться последовательность.
+import time
+def nat(Start=1,Step=1):
+    yield Start
+    while True:
+        yield Start+Step
+        Start += Step
+
+a=55
+b=10
+for num in nat(a,b):
+ print(num)
+ print('-')
+ time.sleep(0.2)

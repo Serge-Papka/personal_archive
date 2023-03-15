@@ -1,0 +1,15 @@
+win_cord = []
+win_lines = 10
+win_cord = [[["ш"]] * win_lines] * (win_lines*2 + 2)
+Создаётся обьёкт меняя который меняяется все сразу
+win_cord[0][0] = ([9, 9)
+
+print(win_cord)
+
+
+
+
+
+field = [[" "]*(Сетка+1) for i in range(Сетка+1)]# (Сетка+1)
+field[0][0] = "ojk"
+print (field) # а так моздаёт отдельные объекты

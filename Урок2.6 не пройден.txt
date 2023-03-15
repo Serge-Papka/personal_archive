@@ -1,0 +1,22 @@
+a = input("Введите первую строку: ")
+b = input("Введите вторую строку: ")
+
+a_split = a.split(' ')
+b_split = b.split(' ')
+#print(a_split)
+
+
+a_set, b_set = set(a_split), set(b_split)
+#print(b_set)
+
+Lista = list(a_set)
+Listb = list(b_set)
+print(Lista)
+print(Listb)
+
+
+List_a__b = list(a_set.symmetric_difference(b_set))
+List_a__b.sort()
+
+
+print(List_a__b)

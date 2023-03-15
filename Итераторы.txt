@@ -1,0 +1,4 @@
+iter_obj = iter("Hello!")
+
+for i in range(0,10):
+    print(next(iter_obj))
