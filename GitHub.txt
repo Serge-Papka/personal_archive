@@ -18,4 +18,5 @@ git add .
 Git commit - m "Комментарий commit"
 git remote add any_name https://github.com/Serge-Papka/C3.git  # C3 должен быть создан.
 git push --set-upstream any_name master
+git remote add fs https://github.com/Serge-Papka/personal_archive.git
 
